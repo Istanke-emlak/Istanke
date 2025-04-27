@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Istanke.com - Real Estate Platform Coming Soon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .circular-text {
+            position: absolute;
+            top: 10vh;
+            right: 10vw;
+            width: 300px;
+            height: 300px;
+            animation: rotate 20s linear infinite;
+            z-index: 1;
+        }
+        
+        @media (max-width: 768px) {
+            .circular-text {
+                width: 200px;
+                height: 200px;
+                top: 5vh;
+                right: 5vw;
+            }
+        }
+        
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .circular-text span {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform-origin: 0 150px;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 0 0 5px rgba(0,0,0,0.5);
+        }
+        
+        @media (max-width: 768px) {
+            .circular-text span {
+                transform-origin: 0 100px;
+                font-size: 14px;
+            }
+        }
+        
+        .app-button {
+            display: flex;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: clamp(8px, 2vw, 12px) clamp(12px, 3vw, 20px);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .app-button:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .arrow {
+            margin-right: clamp(10px, 2vw, 20px);
+            font-size: clamp(18px, 3vw, 24px);
+        }
+        
+        .headline {
+            opacity: 0;
+            position: absolute;
+            transition: opacity 1s ease-in-out;
+            width: 100%;
+            text-align: left;
+        }
+        
+        .headline.active {
+            opacity: 1;
+        }
+        
+        .headline-container {
+            height: clamp(120px, 25vh, 200px);
+            position: relative;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+        
+        .logo {
+            font-size: clamp(18px, 3vw, 24px);
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-align: left;
+            margin-left: 2rem;
+        }
+        
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 2rem;
+        }
+        
+        .footer-buttons {
+            padding: clamp(1.5rem, 5vh, 3rem) 1rem;
+            width: 100%;
+        }
+        
+        header {
+            padding: 2rem 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">istanke.com</div>
+    </header>
+    
+    <div class="circular-text" id="circular-text"></div>
+    
+    <main class="main-content">
+        <div class="w-full max-w-4xl">
+            <div class="headline-container">
+                <h1 class="headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold active" data-lang="en">Find your dream<br>property soon</h1>
+                <h1 class="headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold" data-lang="ar" dir="rtl">اعثر على عقارك<br>المثالي قريباً</h1>
+                <h1 class="headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold" data-lang="tr">Hayalinizdeki mülkü<br>yakında bulun</h1>
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer-buttons">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="app-button">
+                    <span class="text-sm sm:text-base">Our real estate platform launching soon</span>
+                </div>
+                
+                <div class="app-button">
+                    <span class="arrow">→</span>
+                    <div class="flex items-center bg-white bg-opacity-10 rounded-md px-3 py-1">
+                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 1.5-2.86 1.5-1.54 0-3.32-.76-5.36-1.5-2.05-.74-3.95-1.5-5.48-1.5-1.16 0-2.04.26-2.87 1.5-.16.22-.43.38-.71.38-.3 0-.57-.15-.74-.38-.56-.76-.56-2.24 0-3 .83-1.25 1.71-1.5 2.87-1.5 1.53 0 3.43.76 5.48 1.5 2.04.74 3.82 1.5 5.36 1.5 1.15 0 2.03-.26 2.86-1.5.56-.76.56-2.24 0-3-.17-.23-.44-.38-.74-.38-.28 0-.55.16-.71.38-.83 1.24-1.71 1.5-2.86 1.5-1.54 0-3.32-.76-5.36-1.5-2.05-.74-3.95-1.5-5.48-1.5-1.16 0-2.04.26-2.87 1.5-.56.76-.56 2.24 0 3 .17.23.44.38.74.38.28 0 .55-.16.71-.38.83-1.24 1.71-1.5 2.87-1.5 1.53 0 3.43.76 5.48 1.5 2.04.74 3.82 1.5 5.36 1.5 1.15 0 2.03-.26 2.86-1.5.56-.76.56-2.24 0-3-.17-.23-.44-.38-.74-.38-.28 0-.55.16-.71.38-.83 1.24-1.71 1.5-2.86 1.5-1.54 0-3.32-.76-5.36-1.5-2.05-.74-3.95-1.5-5.48-1.5-1.16 0-2.04.26-2.87 1.5-.16.22-.43.38-.71.38-.3 0-.57-.15-.74-.38-.56-.76-.56-2.24 0-3 .83-1.25 1.71-1.5 2.87-1.5 1.53 0 3.43.76 5.48 1.5 2.04.74 3.82 1.5 5.36 1.5 1.15 0 2.03-.26 2.86-1.5.56-.76.56-2.24 0-3-.17-.23-.44-.38-.74-.38-.28 0-.55.16-.71.38z"/>
+                        </svg>
+                        <div>
+                            <div class="text-xs">Soon on the</div>
+                            <div class="text-sm font-semibold">App Store</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="app-button">
+                    <span class="arrow">→</span>
+                    <div class="flex items-center bg-white bg-opacity-10 rounded-md px-3 py-1">
+                        <svg class="w-5 h-5 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3.18 20.82c.44.2.88.18 1.31-.02.43-.2.77-.58 1.02-1.13l.91-2.02 2.72-5.99c.46-1.01.46-2.15.01-3.16l-2.73-5.99-.91-2.02c-.25-.55-.59-.93-1.02-1.13-.43-.2-.87-.22-1.31-.02-.44.2-.8.58-1.06 1.13C2.85 1.02 2.72 1.6 2.72 2.27v19.46c0 .67.13 1.25.4 1.74.26.55.62.93 1.06 1.13zM21.92 12.01c0-.75-.17-1.5-.51-2.24-.34-.75-.81-1.35-1.41-1.81l-3.07-2.15-3.07-2.15c-.6-.42-1.25-.63-1.95-.63-.7 0-1.35.21-1.95.63-.6.42-1.07 1.02-1.41 1.81-.34.75-.51 1.5-.51 2.24 0 .75.17 1.5.51 2.24.34.75.81 1.35 1.41 1.81l3.07 2.15 3.07 2.15c.6.42 1.25.63 1.95.63.7 0 1.35-.21 1.95-.63.6-.42 1.07-1.02 1.41-1.81.34-.75.51-1.5.51-2.24z"/>
+                        </svg>
+                        <div>
+                            <div class="text-xs">Soon on</div>
+                            <div class="text-sm font-semibold">Google Play</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Circular text animation
+            const text = "COMING SOON ";
+            const repeatedText = text.repeat(5);
+            const circularTextElement = document.getElementById('circular-text');
+            
+            // Clear any existing spans
+            circularTextElement.innerHTML = '';
+            
+            // Create the circular text with better spacing
+            for (let i = 0; i < repeatedText.length; i++) {
+                const span = document.createElement('span');
+                span.textContent = repeatedText[i];
+                
+                // Calculate rotation - adjust the multiplier for spacing
+                const rotation = i * 10; 
+                
+                // Apply rotation and add to the container
+                span.style.transform = `rotate(${rotation}deg)`;
+                circularTextElement.appendChild(span);
+            }
+            
+            // Headline language animation
+            const headlines = document.querySelectorAll('.headline');
+            let currentIndex = 0;
+            
+            function rotateHeadlines() {
+                // Hide current headline
+                headlines[currentIndex].classList.remove('active');
+                
+                // Move to next headline
+                currentIndex = (currentIndex + 1) % headlines.length;
+                
+                // Show next headline
+                headlines[currentIndex].classList.add('active');
+            }
+            
+            // Change headline every 3 seconds
+            setInterval(rotateHeadlines, 3000);
+        });
+    </script>
+</body>
+</html>
